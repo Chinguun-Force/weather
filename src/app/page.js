@@ -1,39 +1,17 @@
 'use client'
-import { useState } from "react";
-import Favicon from "react-favicon";
 
-const App = () => {
+import Search from "@/components/Search";
+import Logo from "@/components/Logo";
 
-    // Initialize the favicon URL state 
-    // with the default favicon
-    const [faviconUrl, setFaviconUrl] = useState(
-        "https://cdn-icons-png.flaticon.com/512/0/74.png"
-    );
-
-    // Function to toggle the favicon
-    const toggleFavicon = () => {
-
-        // Check the current favicon and
-        // toggle to the opposite
-        setFaviconUrl(
-            (prevUrl) =>
-                prevUrl ===
-                "https://cdn-icons-png.flaticon.com/512/0/74.png" ?
-
-                // Change to your second favicon file
-                "https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200X200.png"
-                :
-                // Change to your first favicon file
-                "https://cdn-icons-png.flaticon.com/512/0/74.png"
-        );
-    };
-
-    return (
-        <div>
-            <Favicon url={faviconUrl} />
-            <button onClick={toggleFavicon}>Toggle Favicon</button>
+export default function Home() {
+  return (
+    <div className="flex h-screen">
+        <div className='w-1/2 bg-[#F3F4F6] p-40'>
+        <Search/>
+        {/* <Logo/> */}
         </div>
-    );
-};
-
-export default App;
+        <div className='w-1/2 bg-[#0F141E]'>
+        </div>
+    </div>
+  );
+}
