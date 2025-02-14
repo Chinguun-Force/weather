@@ -1,5 +1,5 @@
 export default function Card(props) {
-    console.log(props.condition ,"this is condition")
+    console.log(props.data ,"this is condition")
     return (
         <div className={`w-[414px] h-[828px] ${props.bg} rounded-3xl backdrop-blur-none justify-self-center mt-2 flex flex-col items-center px-8 py-12`}>
             <div className="flex flex-col justify-between h-full">
@@ -23,7 +23,7 @@ export default function Card(props) {
                         className="w-[274px] h-[274px] justify-self-center "
                     />
                 </div>
-                <div className={`bg-gradient-to-${props.gradientDirection} from-[#111827] to-[#6B7280] bg-clip-text text-transparent`}>
+                <div className={`bg-gradient-to-b from-${props.gradient[0]} to-${props.gradient[1]} bg-clip-text text-transparent`}>
                     <span className="text-[120px] font-extrabold leading-[100px] block">
                         {props.data}°
                     </span>
