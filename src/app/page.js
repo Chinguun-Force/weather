@@ -1,5 +1,4 @@
 'use client'
-
 import Search from "@/components/Search";
 import Logo from "@/components/Logo";
 import Card from "@/components/Card";
@@ -8,10 +7,10 @@ import { useState } from "react";
 
 export default function Home() {
   const bgClipText = [
-    "[#111827]", "[#6B7280]"
+    "from-[#111827]", "to-[#6B7280]"
   ]
   const bgClipTextNight = [
-    "gray-400", "gray-200"
+    "from-gray-400", "to-gray-200"
   ]
   const [cityTemp, setCityTemp] = useState([null])
   const [Data, setData] = useState([])  
